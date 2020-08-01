@@ -1,0 +1,197 @@
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.cont-main {
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+.nav_cont {
+  height: 10vh;
+  width: 100%;
+  background-color: #fffff6;
+}
+
+.nav_cont a:hover {
+  color: gold;
+}
+
+.nav_logo {
+  font-family: "Lobster Two", cursive;
+  color: #25ccf7;
+  font-size: 3rem;
+  margin-left: 3rem;
+  text-align: center;
+}
+
+.time {
+  color: white;
+  background-color: #25ccf7;
+  border-radius: 10%;
+  padding: 0.3rem;
+}
+
+.nav_text {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2rem;
+  color: #25ccf7;
+  margin-right: 3rem;
+  padding: 1.4rem;
+}
+
+.link-un::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #25ccf7;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+.link-un:hover::after {
+  width: 100%;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+#hero {
+  height: 90vh;
+  background-color: black;
+  margin-top: 6.6rem;
+}
+
+.hero_img {
+  background-image: url("../images/hero-kids.jpg");
+  width: 100%;
+  height: 90vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero_wrapper {
+  text-decoration: none;
+}
+
+.hero_wrapper h1 {
+  padding-top: 15%;
+  padding-left: 5%;
+  color: #25ccf7;
+  font-family: "Roboto Mono", monospace;
+  font-size: 8rem;
+}
+
+.hero_wrapper h3 {
+  margin-top: 2rem;
+  margin-left: 5%;
+  color: #fffff9;
+  font-size: 4rem;
+  text-shadow: 2px 2px #25ccf7;
+}
+
+.vac-main {
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-top: 5rem;
+  height: 500px;
+}
+
+.row {
+  padding: 2rem;
+}
+
+.vac_img {
+  background-image: url("../images/doc.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vac_heading {
+  color: #25ccf7;
+  padding-top: 3rem;
+  font-size: 5rem;
+  opacity: 1;
+}
+
+.vac_text {
+  color: #7b8788;
+  padding-top: 2.5rem;
+  padding-left: rem;
+  padding-right: 3rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 2;
+  text-align: left;
+  opacity: 1;
+  font-weight: 300;
+}
+
+@media (min-width: 1600px) {
+  .vac_text {
+    font-family: "Roboto Mono", monospace;
+    color: #7b8788;
+    padding-top: 2.5rem;
+    padding-left: rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+    line-height: 2;
+    text-align: left;
+    opacity: 1;
+    font-weight: 300;
+  }
+}
+
+@media (min-width: 1600px) {
+  .vac-heading {
+    font-family: "Montserrat", sans-serif;
+    color: #25ccf7;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 6rem;
+    opacity: 1;
+  }
+}
+
+.slider_main {
+  margin-top: 30rem;
+}
+
+.img-size {
+  width: 100%;
+  height: 530px;
+}
+
+.slider-margin {
+  padding-top: 4rem;
+  background-color: #fffff3;
+}
+
+.reg-margin-bottom {
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 1600px) {
+  .slider-margin {
+    padding-top: 6rem;
+    background-color: #fffff3;
+  }
+}
+/*# sourceMappingURL=defult.css.map */

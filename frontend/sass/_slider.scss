@@ -1,0 +1,24 @@
+.slider_main {
+  margin-top: 30rem;
+}
+
+.img-size {
+  width: 100%;
+  height: 530px;
+}
+
+.slider-margin {
+  padding-top: 4rem;
+  background-color: #fffff3;
+}
+
+.reg-margin-bottom {
+  margin-bottom: 6rem;
+}
+
+@media (min-width: 1600px) {
+  .slider-margin {
+    padding-top: 6rem;
+    background-color: #fffff3;
+  }
+}

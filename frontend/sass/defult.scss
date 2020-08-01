@@ -1,0 +1,51 @@
+//----------------- variables-main----------------------
+
+// >>font-family
+
+$font-logo: "Lobster Two", cursive;
+$font-nav: "Ubuntu", sans-serif;
+$font-head: "Roboto Mono", monospace;
+$font-text: "Montserrat", sans-serif;
+
+// >>font-color
+$color-head: #25ccf7;
+$color-text: #7b8788;
+
+//font-size
+$size-text: 3rem;
+$size-head: 8rem;
+$size-link: 2rem;
+$size-logo: 3rem;
+
+//margin-
+$margin-main: 3rem;
+$margin-top: 6.6rem;
+
+//-----------------------DOM---------------------
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.cont-main {
+  margin-right: $margin-main;
+  margin-left: $margin-main;
+}
+
+// imported files
+
+@import "navbar";
+@import "hero";
+@import "vac";
+@import "slider";
