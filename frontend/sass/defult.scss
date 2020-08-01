@@ -16,9 +16,10 @@ $size-text: 3rem;
 $size-head: 8rem;
 $size-link: 2rem;
 $size-logo: 3rem;
+$size-five: 5rem;
 
 //margin-
-$margin-main: 3rem;
+$margin-main: 5rem;
 $margin-top: 6.6rem;
 
 //-----------------------DOM---------------------
@@ -39,8 +40,46 @@ a {
 }
 
 .cont-main {
-  margin-right: $margin-main;
-  margin-left: $margin-main;
+  margin: $margin-main 3rem;
+}
+
+.cont-two {
+  margin-top: 0;
+  margin-right: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+
+.count-end {
+  margin-top: 6rem;
+  margin-bottom: 0;
+  background-color: #344240;
+  height: 30vh;
+}
+
+.last-font {
+  padding-top: 5%;
+  font-size: $size-five;
+  font-family: font-logo;
+  color: white;
+}
+
+.heart {
+  color: red;
+}
+.in {
+  color: #f76319;
+  text-shadow: 3px 3px #7b8788;
+}
+
+.di {
+  color: #ffffff;
+  text-shadow: 3px 3px #7b8788;
+}
+
+.a {
+  color: #1dc211;
+  text-shadow: 3px 3px #7b8788;
 }
 
 // imported files
@@ -48,4 +87,4 @@ a {
 @import "navbar";
 @import "hero";
 @import "vac";
-@import "slider";
+@import "video";

@@ -15,8 +15,47 @@ a {
 }
 
 .cont-main {
-  margin-right: 3rem;
-  margin-left: 3rem;
+  margin: 5rem 3rem;
+}
+
+.cont-two {
+  margin-top: 0;
+  margin-right: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+
+.count-end {
+  margin-top: 6rem;
+  margin-bottom: 0;
+  background-color: #344240;
+  height: 30vh;
+}
+
+.last-font {
+  padding-top: 5%;
+  font-size: 5rem;
+  font-family: font-logo;
+  color: white;
+}
+
+.heart {
+  color: red;
+}
+
+.in {
+  color: #f76319;
+  text-shadow: 3px 3px #7b8788;
+}
+
+.di {
+  color: #ffffff;
+  text-shadow: 3px 3px #7b8788;
+}
+
+.a {
+  color: #1dc211;
+  text-shadow: 3px 3px #7b8788;
 }
 
 .nav_cont {
@@ -33,7 +72,7 @@ a {
   font-family: "Lobster Two", cursive;
   color: #25ccf7;
   font-size: 3rem;
-  margin-left: 3rem;
+  margin-left: 5rem;
   text-align: center;
 }
 
@@ -103,95 +142,36 @@ a {
   text-shadow: 2px 2px #25ccf7;
 }
 
-.vac-main {
-  margin-left: 3rem;
-  margin-right: 3rem;
-  padding-top: 5rem;
-  height: 500px;
-}
-
-.row {
-  padding: 2rem;
-}
-
-.vac_img {
-  background-image: url("../images/doc.jpg");
-  width: 100%;
-  background-position: center;
+.vac-img {
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 }
 
-.vac_heading {
+.vac-heading {
+  padding: 1.2rem;
+  font-family: "Roboto Mono", monospace;
   color: #25ccf7;
-  padding-top: 3rem;
   font-size: 5rem;
-  opacity: 1;
 }
 
-.vac_text {
+.vac-text {
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
   color: #7b8788;
-  padding-top: 2.5rem;
-  padding-left: rem;
-  padding-right: 3rem;
-  padding-bottom: 1rem;
-  font-size: 2rem;
-  line-height: 2;
+  font-size: 2.3rem;
+  line-height: 1.5;
+}
+
+.video-padding {
+  padding: 4.5rem;
+  background-color: #fffff9;
+}
+
+.link-img {
+  width: 220px;
+  height: 220px;
   text-align: left;
   opacity: 1;
-  font-weight: 300;
-}
-
-@media (min-width: 1600px) {
-  .vac_text {
-    font-family: "Roboto Mono", monospace;
-    color: #7b8788;
-    padding-top: 2.5rem;
-    padding-left: rem;
-    padding-right: 3rem;
-    padding-bottom: 1rem;
-    font-size: 2.2rem;
-    line-height: 2;
-    text-align: left;
-    opacity: 1;
-    font-weight: 300;
-  }
-}
-
-@media (min-width: 1600px) {
-  .vac-heading {
-    font-family: "Montserrat", sans-serif;
-    color: #25ccf7;
-    padding-top: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: 6rem;
-    opacity: 1;
-  }
-}
-
-.slider_main {
-  margin-top: 30rem;
-}
-
-.img-size {
-  width: 100%;
-  height: 530px;
-}
-
-.slider-margin {
-  padding-top: 4rem;
-  background-color: #fffff3;
-}
-
-.reg-margin-bottom {
-  margin-bottom: 6rem;
-}
-
-@media (min-width: 1600px) {
-  .slider-margin {
-    padding-top: 6rem;
-    background-color: #fffff3;
-  }
 }
 /*# sourceMappingURL=defult.css.map */
