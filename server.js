@@ -5,7 +5,7 @@ require('dotenv').config();
 const port = process.env.PORT
 
 app.get('/',(req,res)=>{
-    res.send('Helloo World!!');
+    res.send('Hello World!!');
 })
 
 app.listen(port,()=>console.log(`server up on ${port}`))
