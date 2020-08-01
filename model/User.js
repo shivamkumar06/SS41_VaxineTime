@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema({
     cname: {
         type: String,
     },
-    ParentName: {
+    parentName: {
         type: String,
     },
     aadharID: {
@@ -31,6 +31,9 @@ const userSchema = new mongoose.Schema({
     },
     childID: {
         type: String,
+    },
+    phoneNO: {
+        type: Number,
     },
     vaxine: [],
 
