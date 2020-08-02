@@ -36,12 +36,14 @@
           <div class="right center">
             <h1 class="fourm-head">LOG IN</h1>
           </div>
+
+          <form action="/login" method="POST" class="">
           <%-include('./partials/messages')%>
 
-          <form class="">
             <input
               type="text"
-              id="inputEmail"
+              id="childID"
+              name="childID"
               class="form-control fourm-outer"
               placeholder="Child ID"
               required
@@ -50,7 +52,8 @@
 
             <input
               type="text"
-              id="inputEmail"
+              id="password"
+              name="password"
               class="form-control fourm-outer"
               placeholder="UID"
               required

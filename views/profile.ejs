@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- local css -->
+    <link rel="stylesheet" href="css/defult.css" />
+
+    <!-- google-fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Montserrat:wght@300&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <%- include('./partials/nav2') %>
+    <!-------------------------------------------------------------- -->
+
+     <!-- profile of the child -->
+
+     <div class="profile-top">
+			
+      <!-- upper part -->
+      <div class="">
+         <div class="row">
+            <!-- imgae -->
+            
+            <div class="col-3 center">
+               
+               <img class=" image-f" src="<%=user.coverImagePath%>" height="250" width="200">
+               <div class="overlay">
+                  <div class="text"><a href="/change" class="text">Change Picture</a></div>
+               </div>
+            </div>
+            <!-- profile data here  -->
+            <div class="col-2  ">
+               <h5 class="margin-one child-name"> Child name: </h5>
+               <h6 class="margin-one text-profile">Father's Name:</h6>
+               <h6 class="margin-one text-profile">Id:</h6>
+               <h6 class="margin-one text-profile">Gender:</h6>
+               <h6 class="margin-one text-profile">D.O.B:</h6>
+            </div>
+            <!-- 	put the personal data here  -->
+            
+            <div class="col-4 ">
+               <h5 class="margin-one child-name"><%=user.cname%></h5>
+               <h6 class="margin-one text-profile"><%=user.parentName%></h6>
+               <h6 class="margin-one text-profile"><%=user.aadharID%></h6>
+               <h6 class="margin-one text-profile"><%=user.gender%></h6>
+               <h6 class="margin-one text-profile"><%=user.dateVac%></h6>
+            </div>
+            <!-- profile Qr code here -->
+            <div class="col-3 pading-auto center">
+               <img class="" src="<%= url %>" alt="Qr code">
+            </div>
+         </div>
+      </div>
+      <!-- lower part / vaccine table -->
+      <div class="">
+         <div class="vac-heading margin-top-two">
+            <p>Vaccine Done </p>
+         </div>
+         <div class="margin-top-two">
+            
+            <table class="table table-text">
+               <thead class="thead-light">
+                  <tr>
+                     <th scope="col">S.no</th>
+                     <th scope="col">vaccine Name</th>
+                     <th scope="col">Date</th>
+                     <th scope="col">Hospital</th>
+                     <th scope="col">city</th>
+                     <th scope="col">state</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <th scope="row">1</th>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">2</th>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                  </tr>
+                  <tr>
+                     <th scope="row">3</th>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                     <td>data</td>
+                  </tr>
+               </tbody>
+            </table>
+            
+         </div>
+         
+      </div>
+      
+      
+      
+   </div>
+   
+</div>
+</div>
+
+  </body>
+</html>

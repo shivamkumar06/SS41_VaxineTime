@@ -277,4 +277,84 @@ a {
   margin: 2rem;
   font-size: 1.5rem;
 }
+
+.profile-top {
+  margin-top: 7%;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin-bottom: 7%;
+}
+
+.image-f {
+  display: block;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  background-color: #25ccf7;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text:hover {
+  color: white;
+  text-decoration: underline;
+  text-decoration: none;
+}
+
+.text-profile {
+  color: #7b8788;
+  font-weight: 300;
+  font-size: 1.6rem;
+  font-family: "Roboto Mono", monospace;
+}
+
+.child-name {
+  color: #25ccf7;
+  font-family: "Roboto Mono", monospace;
+  font-size: 2rem;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.pading-auto {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.table-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  color: #7b8788;
+}
+
+.margin-top-two {
+  margin-top: 5rem;
+}
 /*# sourceMappingURL=defult.css.map */

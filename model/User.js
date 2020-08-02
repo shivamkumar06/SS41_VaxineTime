@@ -31,7 +31,7 @@ const userSchema = new mongoose.Schema({
     addr: {
         type: String,
     },
-    gender: {
+    aadharID: {
         type: String,
     },
     dateVac: {
@@ -44,9 +44,10 @@ const userSchema = new mongoose.Schema({
     state: {
         type: String,
     },
-    phoneNO: {
-        type: Number,
+    gender:{
+        type:String
     },
+   
     coverImage: {
         type: Buffer,
     },
@@ -61,7 +62,7 @@ const userSchema = new mongoose.Schema({
 })
 
 userSchema.virtual('coverImagePath').get(function(){
-    if(this.coverImage != null && this.coverImage != mull){
+    if(this.coverImage != null && this.coverImage != null){
         return `data:${this.coverImageType};charset = utf-8; base64, ${this.coverImage.toString('base64')}` 
     }
 })

@@ -62,6 +62,7 @@ app.set('views','./views')
 
 //router
 app.use(require('./router/user'))
+app.use(require('./router/index'))
 
 
 app.listen(port,()=>console.log(`Server up in ${process.env.NODE_ENV} and on port:- ${port}`))
