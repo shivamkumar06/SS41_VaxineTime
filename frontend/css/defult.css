@@ -163,6 +163,38 @@ a {
   line-height: 1.5;
 }
 
+.vac-form {
+  font-size: 1.7rem;
+}
+
+.vac-buttton {
+  color: #25ccf7;
+  background-color: #ffffff;
+  text-align: center;
+  margin-left: 43%;
+  margin-top: 10%;
+}
+
+.dd {
+  padding: 1rem 5rem;
+  color: #25ccf7;
+  background-color: #ffffff;
+  text-align: center;
+  border-color: blue;
+}
+
+.dd:hover {
+  color: #ffffff;
+  background-color: #25ccf7;
+  border-color: red;
+  -webkit-box-shadow: white;
+          box-shadow: white;
+}
+
+.margin-point {
+  margin-left: 0.1rem;
+}
+
 .video-padding {
   padding: 4.5rem;
   background-color: #fffff9;
