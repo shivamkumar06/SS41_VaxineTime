@@ -10,6 +10,7 @@ $font-text: "Montserrat", sans-serif;
 // >>font-color
 $color-head: #25ccf7;
 $color-text: #7b8788;
+$color-white: #ffffff;
 
 //font-size
 $size-text: 3rem;
@@ -88,3 +89,4 @@ a {
 @import "hero";
 @import "vac";
 @import "video";
+@import "fourm";

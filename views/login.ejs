@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- local css -->
+    <link rel="stylesheet" href="css/defult.css" />
+
+    <!-- google-fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Montserrat:wght@300&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <%- include('./partials/nav') %>
+    <!-------------------------------------------------------------- -->
+    <!-- singn in  -->
+    <section class="fourm-top">
+      <div class="row">
+        <div class="col-4 fourm-img"></div>
+        <div class="col-8 fourm-padding">
+          <div class="right center">
+            <h1 class="fourm-head">LOG IN</h1>
+          </div>
+          <%-include('./partials/messages')%>
+
+          <form class="">
+            <input
+              type="text"
+              id="inputEmail"
+              class="form-control fourm-outer"
+              placeholder="Child ID"
+              required
+              autofocus
+            />
+
+            <input
+              type="text"
+              id="inputEmail"
+              class="form-control fourm-outer"
+              placeholder="UID"
+              required
+              autofocus
+            />
+
+            <button
+              class="btn btn-l btn-md btn-primary margin-two center"
+              type="submit"
+            >
+              Sign in
+            </button>
+
+            <input
+              type="file"
+              class="btn btn-l btn-md margin-two center"
+              value=""
+              accept="image/bmp,image/jpeg,image/png,image/gif"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -19,9 +19,11 @@ require('./config/passport')(passport)
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded(({limit : '50mb', extended: true})));
 
+
 //session
 //express Session
 app.use(session({
+    
     secret: process.env.SESSION_SECRET,
     resave: true,
     saveUninitialized: true
@@ -30,6 +32,8 @@ app.use(session({
 //passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 //flash
 app.use(flash());
@@ -58,7 +62,6 @@ app.set('views','./views')
 
 //router
 app.use(require('./router/user'))
-app.use(require('./router/index'))
 
 
 app.listen(port,()=>console.log(`Server up in ${process.env.NODE_ENV} and on port:- ${port}`))

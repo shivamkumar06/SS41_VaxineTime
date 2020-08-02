@@ -22,6 +22,12 @@ const userSchema = new mongoose.Schema({
     aadharID: {
         type: String,
     },
+    baalId:{
+        type:String
+    },
+    phoneNO:{
+        type:Number
+    },
     addr: {
         type: String,
     },
@@ -29,19 +35,13 @@ const userSchema = new mongoose.Schema({
         type: String,
     },
     dateVac: {
-        type: Date,
+        type: String,
         set : date => formatDate(date)
     },
     city: {
         type: String,
     },
     state: {
-        type: String,
-    },
-    pin: {
-        type: String,
-    },
-    childID: {
         type: String,
     },
     phoneNO: {
@@ -51,6 +51,9 @@ const userSchema = new mongoose.Schema({
         type: Buffer,
     },
     coverImageType: {
+        type: String,
+    },
+    childID: {
         type: String,
     },
     vaxine: [],

@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const bycrypt = require('bycryptjs')
 require('../db/mongoose')
-const User = require('..model/User');
+const User = require('../model/User');
 const passport = require('passport');
 const {ensureAuthenticated} = require('../config/auth')
 
@@ -11,12 +10,14 @@ router.get('/',(req,res)=>{
     res.render('index');
 })
 
-//get req for register to be added later
-
+//get router for register
+router.get('/register',(req,res)=>{
+    res.render('register')
+})
 
 //post router for register
 router.post('/register',(req,res) => {
-    const { cname, parentName, aadharID, dateVac, gender, addr, phoneNO, city, pin, state} = req.body;
+    const { cname, parentName, aadharID, baalId, phoneNO, dateVac, gender, addr, city, state} = req.body;
     var name = req.body.cname.slice(0,4);
     var newCity = req.body.city.slice(0,4);
 
@@ -24,7 +25,7 @@ router.post('/register',(req,res) => {
 
     var err = [];
 
-    if(!cname || !parentName || !aadharID || !gender || !dateVac || !city || !pin || !state || !addr || !phoneNO) {
+    if(!cname || !parentName || !aadharID || !gender || !dateVac || !city  || !state || !addr || !phoneNO) {
         err.push({msg: "Please fill all the fields!!"})
     }
 
@@ -35,17 +36,17 @@ router.post('/register',(req,res) => {
             cname,
             parentName,
             aadharID,
+            baalId,
             phoneNO,
             addr,
             gender,
             dateVac,
             city,
-            pin,
             state
     
         });
     }else{
-        User.findOne({aadharID:aadharID}&&{cname:cname})
+        User.findOne({aadharID:aadharID,cname:cname})
         .then((user)=>{
             if(user){
                 err.push({msg:'User Alerady exist!!'});
@@ -54,12 +55,12 @@ router.post('/register',(req,res) => {
                     cname,
                     parentName,
                     aadharID,
-                   phoneNO,
+                    baalId,
+                    phoneNO,
                     addr,
                     gender,
                     dateVac,
                     city,
-                    pin,
                     state
             
                 });
@@ -68,14 +69,14 @@ router.post('/register',(req,res) => {
                     cname,
                     parentName,
                     aadharID,
+                    baalId,
                     phoneNO,
                     addr,
                     gender,
                     dateVac,
                     city,
-                    pin,
                     state,
-                    childId:name +"-"+ Math.floor(Math.random()*100000)+"-" + Newcity+"1",
+                    childID:name +"-"+ Math.floor(Math.random()*100000)+"-" + newCity+"1",
                     vaxine:[
                         'TT-1',
                         'TT-2',
@@ -107,7 +108,7 @@ router.post('/register',(req,res) => {
                    
 
                     newUser.save().then((user)=>{
-                        req.flash('success_msg','Your Child Id id:- ' + user.childId);
+                        req.flash('success_msg','Succesfully Registered!! Your Child Id id:- ' + user.childID);
                         res.redirect('/login');
                     }).catch((err)=>{
                         console.log(err);
@@ -120,7 +121,7 @@ router.post('/register',(req,res) => {
 })
 
 router.get('/login',(req,res)=>{
-    res.render('signin');
+    res.render('login');
 })
 
 module.exports = router
