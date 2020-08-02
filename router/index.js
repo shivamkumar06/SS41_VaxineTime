@@ -80,5 +80,9 @@ function saveCover(user,coverEncoded){
 }
 
 
+router.get('/info',(req,res)=>{
+    res.render('info')
+})
+
 
 module.exports = router
