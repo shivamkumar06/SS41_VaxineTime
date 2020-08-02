@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+
+    <!-- local css -->
+    <link rel="stylesheet" href="css/defult.css" />
+    <link rel = "stylesheet" href="css/info.css" />
+
+    <!-- google-fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Montserrat:wght@300&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Information</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-expand-md nav_cont">
+        <!-- logo-div -->
+        <div class="navbar-nav">
+          <div class="nav-item">
+            <a href="#" class="navbar-brand nav_logo"
+              ><span class="none">Vaxine</span>
+              <span class="time">Time</span></a
+            >
+          </div>
+        </div>
+
+        <!-- nav-links/data-links -->
+
+        <ul class="navbar-nav ml-auto center mr-5">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link nav_text link-un">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="register.html" class="nav-link nav_text link-un"
+              >Register</a>
+          </li>
+          <li class="nav-item">
+            <a href="info.html" class="nav-link nav_text link-un">Info</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link nav_text link-un">LogIn</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-------------------------------------------------------------- -->
+    <!-- Information  -->
+    <section class="fourm-top">
+      <div class="row">
+        <div class="container">
+          <center><h1 class="fourm-head"> Immunization Schedule</h1> </center>
+          <div class="card-deck">
+            <div class="card border-primary mb-3">
+              <img src="images/woman.jpg" class="card-img-top icon_img" alt="...">
+              <div class="card-body">
+                <h3 class="card-title card_text">
+                  <center><a href="#" data-toggle="modal" data-target="#myModel1"> Pregnant Women</a> </center>
+                </h3>
+                
+              </div>
+            </div>
+            <div class="card border-primary mb-3">
+              <img src="images/infant.jpg" class="card-img-top icon_img" alt="...">
+              <div class="card-body">
+                <h3 class="card-title card_text">
+                  <center> <a href="#" data-toggle="modal" data-target="#myModel2">Infant Babies(0-15 months)</a></center>
+                </h3>
+              </div>
+            </div>
+            <div class="card border-primary mb-3">
+              <img src="images/chld.png" class="card-img-top icon_img" alt="...">
+              <div class="card-body">
+                <h3 class="card-title card_text">
+                  <center><a href="#" data-toggle="modal" data-target="#myModel3">Child(16 months- 2years)</a></center></h3>
+              </div>
+            </div>
+          </div>
+        </div
+      </div>
+    </section>
+
+
+
+  <div id="myModel1" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+  <!-- Modal content -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <center><h2 class ="nav_text"> Immunization Schedule for Pregnant Women</h2></center>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-hover">
+            <thead>
+              <tr class ="table_text">
+                <th scope="col">#</th>
+                <th scope="col">Vaccine</th>
+                <th scope="col">When To give</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class ="table_text">
+                <th scope="row">1</th>
+                <td>TT1</td>
+                <td>Early in Pregnancy</td>
+              </tr>
+              <tr class ="table_text">
+                <th scope="row">2</th>
+                <td>TT2</td>
+                <td>4 weeks after TT1 TT Booster </td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="myModel2"class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+  <!-- Modal content -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <center><h2 class ="nav_text"> Immunization Schedule for Infants</h2></center>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <table class="table table-hover">
+          <thead>
+            <tr class ="table_text">
+              <th scope="col">#</th>
+              <th scope="col">Vaccine</th>
+              <th scope="col">When To give</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class ="table_text">
+              <th scope="row">1</th>
+              <td>BCG, OPV-0, Hepatitis-B</td>
+              <td>At birth or early as possible</td>
+            </tr>
+            <tr class ="table_text">
+              <th scope="row">2</th>
+              <td>DPT-1, OPV-1, Hepatitis-B 1, flPV-1, RVV-1, PCV-1</td>
+              <td>6 Weeks </td>
+            </tr>
+            
+            <tr class ="table_text">
+              <th scope="row">3</th>
+              <td>DPT-2, OPV-2, Hepatitis-B 2, RVV-2</td>
+              <td>10 Weeks </td>
+            </tr>
+            
+            <tr class ="table_text">
+              <th scope="row">4</th>
+              <td>DPT-3, OPV-3, Hepatitis-B 3, flPV-2, RVV-3, PCV-2</td>
+              <td>14 Weeks </td>
+            </tr>
+            
+            <tr class ="table_text">
+              <th scope="row">5</th>
+              <td>Measles, VitaminA 1st dose, PCV Booster</td>
+              <td>9 months </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="myModel3"class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+  <!-- Modal content -->
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <center><h2 class ="nav_text"> Immunization Schedule for Children</h2></center>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        <table class="table table-hover">
+          <thead>
+            <tr class ="table_text">
+              <th scope="col">#</th>
+              <th scope="col">Vaccine</th>
+              <th scope="col">When To give</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class ="table_text">
+              <th scope="row">1</th>
+              <td>DPT Booster-1</td>
+              <td>16-24 months</td>
+            </tr>
+            <tr class ="table_text">
+              <th scope="row">2</th>
+              <td>OPV Booster</td>
+              <td>16-24 weeks </td>
+            </tr>
+            
+            <tr class ="table_text">
+              <th scope="row">2</th>
+              <td>Measles-2nd Dose</td>
+              <td>16-24 months </td>
+            </tr>
+            
+            <tr class ="table_text">
+              <th scope="row">3</th>
+              <td>Japanese Encephalitis</td>
+              <td>16-24 months</td>
+            </tr>
+            
+            <tr class ="table_text">
+              <th scope="row">4</th>
+              <td>DPT Booster-2</td>
+              <td>5-6 years </td>
+            </tr>
+            
+            <tr class ="table_text">
+              <th scope="row">5</th>
+              <td>Vitamin A -2nd to 9th Dose(every 6 months till 6 years</td>
+              <td>18 moths to 5 years </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </body>
+</html>
