@@ -58,15 +58,16 @@ router.post('/profile',ensureAuthenticated,async(req,res)=>{
 router.get('/change',(req,res)=>{
     res.render('change')
 })
-// router.get('/update',ensureAuthenticated,(req,res)=>{
-//     res.render('update')
-// })
 
-// router.post('/update',ensureAuthenticated,(req,res)=>{
-//     var { update} = req.body;
-//     const user = User.findOne({user:req.user.id})
-//     console.log(user)
-// })
+router.get('/update',ensureAuthenticated,(req,res)=>{
+    res.render('update')
+})
+
+router.post('/update',ensureAuthenticated,(req,res)=>{
+    var { update} = req.body;
+    const user = User.findOne({})
+    console.log(user.cname)
+})
 
 
 function saveCover(user,coverEncoded){
