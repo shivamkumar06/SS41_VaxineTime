@@ -1,0 +1,102 @@
+.fourm-top {
+  margin-top: 12%;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-bottom: 12%;
+}
+
+.fourm-img {
+  background-image: url("../images/login-back.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.fourm-head {
+  color: $color-head;
+  font-family: $font-logo;
+  font-size: $size-text;
+  margin-bottom: 3rem;
+}
+
+.fourm-outer {
+  font-family: $font-head;
+  font-size: 1.8rem;
+
+  margin-bottom: 2rem;
+}
+
+.fourm-padding {
+  padding: 10rem;
+}
+
+.padding-two {
+  padding: 3rem;
+}
+
+.btn-l {
+  background-color: #ffffff;
+  color: #25ccf7;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 1.5rem;
+  font-family: $font-text;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.btn-l:hover {
+  background-color: #25ccf7;
+  color: #ffffff;
+}
+
+.reg-background-img {
+  background-image: url("../images/reg-back.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.reg-text {
+  font-family: $font-head;
+}
+
+.peach {
+  background-color: #fffff3;
+}
+
+.right-heading {
+  font-family: $font-logo;
+  color: $color-head;
+  padding: 2rem;
+  font-size: 4rem;
+}
+
+.margin-one {
+  margin: 1rem;
+}
+
+.padding-one {
+  padding: 1rem;
+}
+
+.form-control {
+  font-size: 1.4rem;
+}
+
+.form-text {
+  font-size: 1.4rem;
+}
+.margin-two {
+  margin: 2rem;
+  font-size: 1.5rem;
+}

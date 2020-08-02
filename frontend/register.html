@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- local css -->
+    <link rel="stylesheet" href="css/defult.css" />
+
+    <!-- google-fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Montserrat:wght@300&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-expand-md nav_cont">
+        <!-- logo-div -->
+        <div class="navbar-nav">
+          <div class="nav-item">
+            <a href="#" class="navbar-brand nav_logo"
+              ><span class="none">Vaxine</span>
+              <span class="time">Time</span></a
+            >
+          </div>
+        </div>
+
+        <!-- nav-links/data-links -->
+
+        <ul class="navbar-nav ml-auto center mr-5">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link nav_text link-un">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="register.html" class="nav-link nav_text link-un"
+              >Register</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link nav_text link-un">Info</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link nav_text link-un">LogIn</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-------------------------------------------------------------- -->
+    <section>
+      <!-- register page -->
+      <div class="fourm-top reg-margin-bottom">
+        <div class="">
+          <div class="row">
+            <div class="col-4 reg-background-img"></div>
+            <div class="col-8 reg-text peach">
+              <div class="reg-from margin-right">
+                <h1 class="right-heading center">Registration</h1>
+                <form action="" class="form-text padding-two">
+                  <input
+                    type="text"
+                    id="inputPassword"
+                    class="form-control padding-one margin-one"
+                    placeholder="Parents's Name"
+                  />
+                  <input
+                    type="text"
+                    id="inputPassword"
+                    class="form-control padding-one margin-one"
+                    placeholder="Parents's Goverment Id"
+                  />
+
+                  <div class="form-group margin-one">
+                    <div class="row">
+                      <div class="col-2"><label>D.O.B:</label></div>
+                      <div class="col-10">
+                        <input type="date" id="date-vac" name="date-vac" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-radio">
+                    <div class="row">
+                      <div class="col-2">
+                        <label
+                          for="gender"
+                          class="radio-label form-text margin-one"
+                          >Gender:</label
+                        >
+                      </div>
+                      <div class="col-10">
+                        <div class="form-radio-item">
+                          <input type="radio" name="gender" id="male" />
+                          <label for="male">Male</label>
+                          <span class="check"></span>
+                          <input type="radio" name="gender" id="female" />
+                          <label for="female">Female</label>
+                          <span class="check"></span>
+                          <input type="radio" name="gender" id="female" />
+                          <label for="female">Others</label>
+                          <span class="check"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <input
+                    type="text"
+                    id="inputPassword"
+                    class="form-control padding-one margin-one"
+                    placeholder="Address"
+                  />
+
+                  <input
+                    type="text"
+                    id="inputPassword"
+                    class="form-control padding-one margin-one"
+                    placeholder="City"
+                  />
+
+                  <input
+                    type="text"
+                    id="inputPassword"
+                    class="form-control padding-one margin-one"
+                    placeholder="State"
+                  />
+
+                  <button
+                    class="btn btn-lg btn-danger margin-two center"
+                    type="reset"
+                  >
+                    Reset
+                  </button>
+
+                  <button
+                    class="btn btn-lg btn-dark margin-two center"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+
+                  <input
+                    type="file"
+                    class="btn btn-l btn-md margin-two center"
+                    value=""
+                    accept="image/bmp,image/jpeg,image/png,image/gif"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
