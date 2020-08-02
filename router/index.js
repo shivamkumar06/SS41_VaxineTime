@@ -2,16 +2,17 @@ const express = require('express')
 const router = express.Router()
 require('../db/mongoose')
 const User = require('../model/User')
+const Done = require('../model/done_vaxine')
 const {ensureAuthenticated} = require('../config/auth')
 const qr = require('qrcode')
-const hospital = require('../model/hospital')
+const Hospital = require('../model/hospital')
 
 const ImageMimeType = ['image/jpeg','image/png','image/gif']
 
 
 router.get('/vaccine', ensureAuthenticated, async (req, res) => {
     try {
-      const hospital = await Hospital.find({})
+       const hospital = await Hospital.find({})
       const user = await User.find({});
       const done = await Done.find({ user: req.user.id });
       console.log(hospital)
@@ -29,33 +30,20 @@ router.get('/vaccine', ensureAuthenticated, async (req, res) => {
   
   router.post('/vaccine', ensureAuthenticated, async (req, res) => {
   
-    var { vaccineName, date, hospitalName, City1, State1 } = req.body
+    var { vaccineName, date, doctor, hospitalName, PresentPerson, mobileNO } = req.body
   
-    //  date = date.join('')
     
     const done = await Done.find({ user: req.user.id })
     const hospital = await Hospital.find({})
   
   
-    // var dateString = date;
   
-  
-  
-  
-  
-    // hospitalName = hospitalName.join("")
-    // City1 = City1.join("")
-    // State1 = State1.join("")
-    // req.body = { vaccineName, date, hospitalName, City1, State1 }
-    
-    // console.log(req.body)
   
     var err = "";
     user = req.user.id;
   
-    // console.log(req.user)
   
-    if (!vaccineName || !date || !hospitalName || !City1 || !State1) {
+    if (!vaccineName || !date ||!doctor || !hospitalName || !PresentPerson || !mobileNO) {
       err = "please fill in all the fields!!"
       res.render("vaccine", {
         err : err,
@@ -97,6 +85,8 @@ router.get('/vaccine', ensureAuthenticated, async (req, res) => {
 
 router.get('/profile',ensureAuthenticated,async(req,res)=>{
     try{
+    const done = await Done.find({ user: req.user.id });
+
     const src = ({
         ChildId:req.user.childID,
         Name:req.user.cname,
@@ -113,6 +103,7 @@ router.get('/profile',ensureAuthenticated,async(req,res)=>{
     const url = await qr.toDataURL(JSON.stringify(src))
     res.render('profile',{
         user:req.user,
+        done,
         src,
         url
     })
@@ -177,7 +168,7 @@ router.get('/test',(req,res)=>{
   
   router.post('/test',(req,res)=>{
     const {HospitalId,HospitalName} = req.body;
-    const newhospitals = new hospital({
+    const newhospitals = new Hospital({
       HospitalId,
       HospitalName
   

@@ -22,11 +22,12 @@
       rel="stylesheet"
     />
 
-    <title>Child Profile</title>
+    <title>Home</title>
   </head>
   <body>
     <!-- navbar -->
-    <%- include('./partials/nav2')%>
+    <%- include('./partials/nav2') %>
+    
     <!-------------------------------------------------------------- -->
 
      <!-- profile of the child -->
@@ -75,21 +76,18 @@
          </div>
          <div class="margin-top-two">
             
-            <table class="table table-text center">
+            <table class="table table-text">
                <thead class="thead-light">
                   <tr>
-                    
                      <th scope="col">vaccine Name</th>
                      <th scope="col">Date</th>
-                     <th scope="col">Doctor</th>
                      <th scope="col">Hospitalid & Location</th>
-                     
                      <th scope="col">Person Present</th>
                      <th scope="col">Mobile No.</th>
                   </tr>
                </thead>
                <tbody>
-                  <% if(typeof done != 'undefined'){%>
+                    	<% if(typeof done != 'undefined'){%>
 							<% done.forEach(function(data){%>
 							<tr>
 							
@@ -103,7 +101,7 @@
 									<%})%>
 							<%}%>
 							</tr>
-                  
+                 
                </tbody>
             </table>
             

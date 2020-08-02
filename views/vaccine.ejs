@@ -22,63 +22,87 @@
       rel="stylesheet"
     />
 
-    <title>Child Profile</title>
+    <title>Child Vaccination</title>
   </head>
   <body>
     <!-- navbar -->
-    <%- include('./partials/nav2')%>
+    <%- include('./partials/nav2') %>
     <!-------------------------------------------------------------- -->
 
-     <!-- profile of the child -->
+     <!-- VACCINE  of the child -->
 
      <div class="profile-top">
+
+      <div>
+        <div class="vac-heading ">
+        <p>Vaccine List </p>
+        </div>
+        	<% if(typeof err != 'undefined') { %>
+					<div class="alert alert-danger" role="alert"><%= err %></div>
+				<% }%>
+
+        <!-- vaccine table -->
+
+        <form action="/vaccine" method="POST" class="margin-point">
+
+          <div class=" row vac-form  center ">
+
+             <div class="padding-one ">
+									<select class="list-vac-text" id="vaccine" name="vaccineName">
+										<% user.vaxine.forEach(function(data){%>
+										<option value="<%=data%>"><%=data%></option>
+											<%})%> 
+											
+									</select>
+								</div>
+             <div class="col-2">
+               <input class="" name="date" type="date" >
+             </div>
+             <div class="col-2">
+               <input type="text" name="doctor" placeholder="Medical Personal Name">
+             </div>
+             <div class="col-2">
+               	<select class="list-vac-text" id="hospital" name="hospitalName">
+									<%hospital.forEach(function(data){%>
+									<option value="<%=data.HospitalId%>"><%=data.HospitalId%></option>
+									<% }) %> 
+									
+								</select>
+             </div>
+             <div class="col-2">
+              <input type="text" name="PresentPerson" placeholder="Person Present">
+             </div>
+             <div class="col-2">
+              <input type="text" name="mobileNO" placeholder="Mobile No.">
+             </div>
+             
+             
+          </div>
+
+        <span class="vac-buttton"><button class="btn btn-lg btn-dark margin-two center dd "type="submit"> Submit</button></span>  
+
+        </form>
+
+     </div>
+     
+    
+     
 			
       <!-- upper part -->
-      <div class="">
-         <div class="row">
-            <!-- imgae -->
-            
-            <div class="col-3 center">
-               
-               <img class=" image-f" src="<%=user.coverImagePath%>" height="250" width="200">
-               <div class="overlay">
-                  <div class="text"><a href="/change" class="text">Change Picture</a></div>
-               </div>
-            </div>
-            <!-- profile data here  -->
-            <div class="col-2  ">
-               <h5 class="margin-one child-name"> Child name: </h5>
-               <h6 class="margin-one text-profile">Father's Name:</h6>
-               <h6 class="margin-one text-profile">Mother's Name:</h6>
-               <h6 class="margin-one text-profile">Gender:</h6>
-               <h6 class="margin-one text-profile">D.O.B:</h6>
-            </div>
-            <!-- 	put the personal data here  -->
-            
-            <div class="col-4 ">
-               <h5 class="margin-one child-name"><%=user.cname%></h5>
-               <h6 class="margin-one text-profile"><%=user.parentName%></h6>
-               <h6 class="margin-one text-profile"><%=user.aadharID%></h6>
-               <h6 class="margin-one text-profile"><%=user.gender%></h6>
-               <h6 class="margin-one text-profile"><%=user.dateVac%></h6>
-            </div>
-            <!-- profile Qr code here -->
-            <div class="col-3 pading-auto center">
-               <img class="" src="<%= url %>" alt="Qr code">
-            </div>
-         </div>
-      </div>
+
+     
+      
       <!-- lower part / vaccine table -->
-      <div class="">
-         <div class="vac-heading margin-top-two">
-            <p>Vaccine Done </p>
+      <div class="margin-top-two">
+         <div class="vac-heading ">
+            <p>Vaccine Done</p>
          </div>
          <div class="margin-top-two">
             
             <table class="table table-text center">
                <thead class="thead-light">
                   <tr>
-                    
+                     
                      <th scope="col">vaccine Name</th>
                      <th scope="col">Date</th>
                      <th scope="col">Doctor</th>
@@ -89,7 +113,7 @@
                   </tr>
                </thead>
                <tbody>
-                  <% if(typeof done != 'undefined'){%>
+                 	<% if(typeof done != 'undefined'){%>
 							<% done.forEach(function(data){%>
 							<tr>
 							
@@ -103,7 +127,8 @@
 									<%})%>
 							<%}%>
 							</tr>
-                  
+                
+                
                </tbody>
             </table>
             
@@ -117,6 +142,7 @@
    
 </div>
 </div>
+
 
   </body>
 </html>
