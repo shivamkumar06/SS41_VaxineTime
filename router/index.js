@@ -171,6 +171,24 @@ router.get('/info',(req,res)=>{
     res.render('info')
 })
 
+router.get('/test',(req,res)=>{
+    res.render('test')
+  })
+  
+  router.post('/test',(req,res)=>{
+    const {HospitalId,HospitalName} = req.body;
+    const newhospitals = new hospital({
+      HospitalId,
+      HospitalName
+  
+    })
+    newhospitals.save().then(()=>{
+      console.log(`saved!!!`)
+    }).catch((err)=>{
+      console.log(err)
+    })
+  })
+
 router.get('*', (req, res) => {
     res.render('404')
   })
