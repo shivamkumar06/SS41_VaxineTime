@@ -1,0 +1,90 @@
+//----------------- variables-main----------------------
+
+// >>font-family
+
+$font-logo: "Lobster Two", cursive;
+$font-nav: "Ubuntu", sans-serif;
+$font-head: "Roboto Mono", monospace;
+$font-text: "Montserrat", sans-serif;
+
+// >>font-color
+$color-head: #25ccf7;
+$color-text: #7b8788;
+
+//font-size
+$size-text: 3rem;
+$size-head: 8rem;
+$size-link: 2rem;
+$size-logo: 3rem;
+$size-five: 5rem;
+
+//margin-
+$margin-main: 5rem;
+$margin-top: 6.6rem;
+
+//-----------------------DOM---------------------
+html {
+  font-size: 62.5%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.cont-main {
+  margin: $margin-main 3rem;
+}
+
+.cont-two {
+  margin-top: 0;
+  margin-right: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+}
+
+.count-end {
+  margin-top: 6rem;
+  margin-bottom: 0;
+  background-color: #344240;
+  height: 30vh;
+}
+
+.last-font {
+  padding-top: 5%;
+  font-size: $size-five;
+  font-family: font-logo;
+  color: white;
+}
+
+.heart {
+  color: red;
+}
+.in {
+  color: #f76319;
+  text-shadow: 3px 3px #7b8788;
+}
+
+.di {
+  color: #ffffff;
+  text-shadow: 3px 3px #7b8788;
+}
+
+.a {
+  color: #1dc211;
+  text-shadow: 3px 3px #7b8788;
+}
+
+// imported files
+
+@import "navbar";
+@import "hero";
+@import "vac";
+@import "video";

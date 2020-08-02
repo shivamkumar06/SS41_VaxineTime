@@ -1,0 +1,46 @@
+.nav_cont {
+  height: 10vh;
+  width: 100%;
+  background-color: #fffff6;
+
+  a:hover {
+    color: gold;
+  }
+}
+
+.nav_logo {
+  font-family: $font-logo;
+  color: $color-head;
+  font-size: $size-logo;
+  margin-left: $margin-main;
+  text-align: center;
+}
+
+.time {
+  color: white;
+  background-color: $color-head;
+  border-radius: 10%;
+  padding: 0.3rem;
+}
+
+.nav_text {
+  font-family: $font-nav;
+  font-size: $size-link;
+  color: $color-head;
+  margin-right: 3rem;
+  padding: 1.4rem;
+}
+
+.link-un::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: $color-head;
+  transition: width 0.3s;
+}
+
+.link-un:hover::after {
+  width: 100%;
+  transition: width 0.3s;
+}

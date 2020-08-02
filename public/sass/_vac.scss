@@ -1,0 +1,20 @@
+.vac-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.vac-heading {
+  padding: 1.2rem;
+  font-family: $font-head;
+  color: $color-head;
+  font-size: $size-five;
+}
+
+.vac-text {
+  padding: 1rem;
+  font-family: $font-text;
+  color: $color-text;
+  font-size: 2.3rem;
+  line-height: 1.5;
+}
