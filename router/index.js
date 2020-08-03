@@ -195,6 +195,30 @@ console.log(doneC);
  })
 })
 
+
+router.get('/docReg',(req,res)=>{
+  res.render('docRegister')
+})
+var err = [];
+router.post('/docReg',(req,res)=>{
+  const { admin,admin2 } =req.body
+  if(admin === 'admin' && admin2 === 'admin'){
+    res.redirect('/data');
+  }else{
+    err.push({msg:'Invalid credentials'});
+    res.render('docRegister',{
+        err,
+        admin,
+        admin2
+
+  })
+}
+})
+
+router.get('/call',(req,res)=>{
+  res.render('call')
+})
+
 router.get('*', (req, res) => {
     res.render('404')
   })

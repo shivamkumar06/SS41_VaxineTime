@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap css -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- local css -->
+    <link rel="stylesheet" href="css/defult.css" />
+
+    <!-- google-fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&family=Montserrat:wght@300&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Home</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <!-------------------------------------------------------------- -->
+    <!-- singn in  -->
+    <section class="fourm-top">
+      <div class="row">
+        <div class="col-4 fourm-img"></div>
+        <div class="col-8 fourm-padding">
+          <div class="right center">
+            <h1 class="fourm-head">Admin</h1>
+          </div>
+
+          <form action="/docReg" method="POST" class="">
+          <%-include('./partials/messages')%>
+
+            <input
+              type="text"
+              id="childID"
+              name="admin"
+              class="form-control fourm-outer"
+              placeholder="ID"
+              required
+              autofocus
+            />
+
+            <input
+              type="text"
+              id="password"
+              name="admin2"
+              class="form-control fourm-outer"
+              placeholder="Password"
+              required
+              autofocus
+            />
+
+            <button
+              class="btn btn-l btn-md btn-primary margin-two center"
+              type="submit"
+            >
+              Sign in
+            </button>
+
+            <input
+              type="file"
+              class="btn btn-l btn-md margin-two center"
+              id="uploadImage"
+              value=""
+              accept="image/bmp,image/jpeg,image/png,image/gif"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+      <!-- form here the adhaar card fetch is done -->
+			<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@7.2.3-v2/dist/dbr.js"
+				data-productKeys="t0068NQAAAKXzHou6E0SPQhUHVu96TPEkLCOBs/Qq8PSdFUcBpq936+8Dj+WJiycAWbUgh5Z7BZR6SDJ1dpjkiq9VcSYMFF8="></script>
+
+			
+			<script src="/javascript/login-uid.js"></script>
+			<script src="/javascript/id.js"></script>
+  </body>
+</html>
