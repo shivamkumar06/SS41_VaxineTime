@@ -9,11 +9,12 @@
   <title>My Chart.js Chart</title>
 </head>
 <body>
-<div>
-    
+  <div class="container" style="position: relative; height:40vh; width:80vh">
+    <canvas id="myChart" ></canvas>
+    <canvas id="myChart2"></canvas>
 
-  <div class="container" style="position: relative; height:30vh; width:60vh">
-    <canvas id="myChart"></canvas>
+    <canvas id="myChart1"></canvas>
+
   </div>
 
   <script>
@@ -25,78 +26,14 @@
     Chart.defaults.global.defaultFontColor = '#777';
 
     let massPopChart = new Chart(myChart, {
-      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
-      data:{
-        labels:['User','Vaccine'],
-        datasets:[{
-          label:'Population',
-          data:[
-           <%=userC%>,
-           <%=doneC%>
-           
-          ],
-          //backgroundColor:'green',
-          backgroundColor:[
-            'rgba(255, 99, 132, 0.6)',
-            'rgba(54, 162, 235, 0.6)',
-            
-          ],
-          borderWidth:1,
-          borderColor:'#777',
-          hoverBorderWidth:3,
-          hoverBorderColor:'#000',
-        }]
-      },
-      options:{
-        title:{
-          display:true,
-          text:'cumulative user and vaccine data',
-          fontSize:25
-        },
-        legend:{
-          display:true,
-          position:'right',
-          labels:{
-            fontColor:'#000'
-          }
-        },
-        layout:{
-          padding:{
-            left:0,
-            right:50,
-            bottom:0,
-            top:0
-          }
-        },
-        tooltips:{
-          enabled:true
-        }
-      }
-    });
-  </script>
-
-    <div class="container1" style="position: relative; height:30vh; width:50vh">
-    <canvas id="myChart1"></canvas>
-  </div>
-
-  <script>
-    let myChart1 = document.getElementById('myChart1').getContext('2d');
-
-    // Global Options
-    Chart.defaults.global.defaultFontFamily = 'Lato';
-    Chart.defaults.global.defaultFontSize = 18;
-    Chart.defaults.global.defaultFontColor = '#777';
-
-    let massPopChart1 = new Chart(myChart1, {
       type:'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        labels:['User','Vaccine'],
+        labels:['User','Vaccines'],
         datasets:[{
           label:'Population',
           data:[
-         <%=userC%>,
-           <%=doneC%>
-           
+            <%=userC%>,
+            <%=doneC%>
           ],
           //backgroundColor:'green',
           backgroundColor:[
@@ -117,11 +54,137 @@
       options:{
         title:{
           display:true,
-          text:'cumulative user and vaccine data',
+          text:'Cumulative User and vaccine-done',
           fontSize:25
         },
         legend:{
-          display:false,
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+
+
+
+    let myChart1 = document.getElementById('myChart1').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart1 = new Chart(myChart1, {
+      type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+        labels:['rch1-pune-MH', 'rch1-delhi-DL', 'rch1-banglore-MH', 'rch1-pune-MH'],
+        datasets:[{
+          label:'Population',
+          data:[
+            100,
+            200,
+            300,
+            400
+            
+          ],
+          //backgroundColor:'green',
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ],
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'No. of people visited ',
+          fontSize:25
+        },
+        legend:{
+          display:true,
+          position:'right',
+          labels:{
+            fontColor:'#000'
+          }
+        },
+        layout:{
+          padding:{
+            left:50,
+            right:0,
+            bottom:0,
+            top:0
+          }
+        },
+        tooltips:{
+          enabled:true
+        }
+      }
+    });
+
+
+    let myChart2 = document.getElementById('myChart2').getContext('2d');
+
+    // Global Options
+    Chart.defaults.global.defaultFontFamily = 'Lato';
+    Chart.defaults.global.defaultFontSize = 18;
+    Chart.defaults.global.defaultFontColor = '#777';
+
+    let massPopChart2 = new Chart(myChart2, {
+      type:'line', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+      data:{
+      labels:['User','Vaccines'],
+        datasets:[{
+          label:'Population',
+          data:[
+            <%=userC%>,
+            <%=doneC%>
+          ],
+          //backgroundColor:'green',
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ],
+          borderWidth:1,
+          borderColor:'#777',
+          hoverBorderWidth:3,
+          hoverBorderColor:'#000'
+        }]
+      },
+      options:{
+        title:{
+          display:true,
+          text:'Cumulative User and vaccine-done',
+          fontSize:25
+        },
+        legend:{
+          display:true,
           position:'right',
           labels:{
             fontColor:'#000'
@@ -141,88 +204,5 @@
       }
     });
   </script>
-   <li class="nav-item">
-            <a href="/logout" class="nav-link nav_text link-un btn btn-primary"style="float:right">logout</a>
-          </li>
-
- <li class="nav-item">
-            <a href="/call" class="btn btn-primary" style="float:right">Make call</a>
-          </li>
-          
-
-  </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
