@@ -180,6 +180,21 @@ router.get('/test',(req,res)=>{
     })
   })
 
+  router.get('/data',async(req,res)=>{
+    const user = User.find({})
+    const done = Done.find({})
+    
+    const userC = await User.countDocuments();
+console.log(userC);
+  const doneC = await Done.countDocuments();
+console.log(doneC);
+ 
+ res.render('data',{
+  userC,
+  doneC
+ })
+})
+
 router.get('*', (req, res) => {
     res.render('404')
   })
